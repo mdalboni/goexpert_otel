@@ -1,4 +1,4 @@
-POST http://localhost:8080/weather
+POST http://34.41.159.97:8080/weather
 Content-Type: application/json
 
 {

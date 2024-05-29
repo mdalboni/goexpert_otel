@@ -1,7 +1,5 @@
 # GO Expert - Open Telemetry
 
-You can use the live demo on: https://goexpert-3-icvwowoova-uc.a.run.app
-
 ## Run locally
 
 In the project root execute:
@@ -34,10 +32,11 @@ can not find zipcode
 
 ## URLs
 
-| Service    | URL                    |
-| ---------- | ---------------------- |
-| Jaeger     | http://localhost:16686 |
-| Prometheus | http://localhost:9090  |
-| Zipkin     | http://localhost:9411  |
+| Service    | URL                    | GCP Project               |
+| ---------- | ---------------------- | ------------------------- |
+| Jaeger     | http://localhost:16686 | http://34.41.159.97:16686 |
+| Prometheus | http://localhost:9090  | http://34.41.159.97:9090  |
+| Zipkin     | http://localhost:9411  | http://34.41.159.97:9411  |
+| Webserver  | http://localhost:8080  | http://34.41.159.97:8080  |
 
  
