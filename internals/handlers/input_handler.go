@@ -42,7 +42,6 @@ func (wh *OtelWeatherInputHandler) PostWeather(w http.ResponseWriter, r *http.Re
 
 	_, span := wh.OTELTracer.Start(ctx, "OtelWeatherInputHandler.PostWeather")
 	defer span.End()
-	w.Header().Set("Content-Type", "application/json")
 
 	var input PostOtelWeatherInput
 	err := json.NewDecoder(r.Body).Decode(&input)
@@ -79,7 +78,7 @@ func (wh *OtelWeatherInputHandler) PostWeather(w http.ResponseWriter, r *http.Re
 		return
 	}
 
-	// Truncating values to ensure only 1 decimal place
+	w.Header().Set("Content-Type", "application/json")
 	w.WriteHeader(http.StatusOK)
 	json.NewEncoder(w).Encode(response)
 }

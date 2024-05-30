@@ -12,7 +12,6 @@ import (
 	"github.com/mdalboni/goexpert_3/internals/server"
 	"github.com/mdalboni/goexpert_3/pkg/logging"
 	"github.com/mdalboni/goexpert_3/pkg/telemetry"
-	"github.com/prometheus/client_golang/prometheus/promhttp"
 	"github.com/riandyrn/otelchi"
 	"go.opentelemetry.io/otel"
 	"go.opentelemetry.io/otel/trace"
@@ -88,6 +87,6 @@ func setupHandler(trace trace.Tracer) *chi.Mux {
 	r.Use(otelchi.Middleware(serviceName, otelchi.WithChiRoutes(r)))
 	weatherHandler := handlers.NewWeatherHandler(trace)
 	r.Get("/weather/{zipCode}", weatherHandler.GetWeather)
-	r.Handle("/metrics", promhttp.Handler())
+	// r.Handle("/metrics", promhttp.Handler())
 	return r
 }

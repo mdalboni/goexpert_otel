@@ -6,5 +6,9 @@
             "source.organizeImports": "always"
         }
     },
-    "editor.formatOnSave": true
+    "editor.formatOnSave": true,
+    "cloudcode.apigee.gemini.enable": false,
+    "cloudcode.autoDependencies": "off",
+    "cloudcode.cloudSdkVerbosityLevel": "info",
+    "cloudcode.enableGkeAutopilotSupport": false
 }
